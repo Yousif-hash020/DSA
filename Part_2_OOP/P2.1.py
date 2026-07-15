@@ -19,6 +19,9 @@ class Car:
         
 
 new_Car = Car('toyita')
-
+snd_car = Car('Hundai', 'Supervite')
 print(new_Car.color)
-print(new_Car.brand)        
+print(new_Car.brand)   
+
+print(snd_car.brand)
+print(snd_car.color)
