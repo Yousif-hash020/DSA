@@ -44,6 +44,22 @@ class DoublyLinkdelist:
         current.next = new_node
         new_node.prev = current
 
+    def insert_after(self, target, info):
+        current = self.head
+
+        while current is not None:
+            if current.info == target:
+                new_node = Node(info)
+
+                new_node.next = current.next
+                if current.next is not None:
+                 current.next.prev = new_node
+            
+                new_node.prev = current
+                current.next = new_node
+                return
+            current = current.next
+        print("node not found") 
 
     def dispaly(self):
         current = self.head
@@ -75,3 +91,7 @@ dl.dispaly()
       
 dl.insert_at_end(20)
 dl.dispaly()
+
+dl.insert_after(220,221)
+dl.dispaly()
+
