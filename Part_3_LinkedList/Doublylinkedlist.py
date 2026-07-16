@@ -7,6 +7,29 @@ class Node:
 class DoublyLinkdelist:
     def __init__(self, head= None):
         self.head = head
+    
+    def delete_at_start(self):
+        if self.head is None:
+            print("List is empty")
+            return
+        self.head = self.head.next
+        if self.head is not None:
+            self.head.prev = None
+
+    def del_at_end(self):
+       if self.head is None:
+            print("List is empty")
+            return
+       if self.head.next is None:
+           self.head = None
+           return
+       
+       current = self.head
+
+       while current.next is not None:
+           current = current.next
+       current.prev.next = None
+
 
 
     def backwardtraverse(self):
@@ -93,5 +116,11 @@ dl.insert_at_end(20)
 dl.dispaly()
 
 dl.insert_after(220,221)
+dl.dispaly()
+
+dl.delete_at_start()
+dl.dispaly()
+
+dl.del_at_end()
 dl.dispaly()
 
