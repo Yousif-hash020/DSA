@@ -13,7 +13,7 @@ class DbLinkedlist:
 
         if self.head is None:
             self.head = new_node
-            return
+            return   
         t1 = self.head
 
         while t1.next is not None:
