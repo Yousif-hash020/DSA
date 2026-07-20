@@ -16,6 +16,7 @@ class Queue:
 que1 = Queue()
 
 que1.enqueue(8)
+que1.enqueue(8)
 que1.enqueue(1)
 que1.enqueue(2)
 que1.enqueue(3)
