@@ -20,6 +20,7 @@ class Circular_Queue:
         self.rear = (self.rear + 1) % self.capacity
         self.queue[self.rear] = item
         self.size +=1
+        
     def Deque(self):
         if self.is_empty():
             print("Queue is empty")
@@ -53,21 +54,16 @@ class Circular_Queue:
 
 
     
-cq = Circular_Queue(6)
+cq = Circular_Queue(7)
 
 cq.Enqueue(1)
 cq.Enqueue(2)
 cq.Enqueue(3)
 cq.Enqueue(4)
-  
-cq.Deque()
-cq.Deque()
-cq.Deque()
 
 cq.Enqueue(5)
 cq.Enqueue(6)
-cq.Enqueue(6)
-cq.Enqueue(6)
+cq.Enqueue(7)
 
 cq.diaplay()
 print(cq.Front())
