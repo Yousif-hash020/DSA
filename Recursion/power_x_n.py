@@ -7,4 +7,4 @@ def power(x, n):
     
     return x * power (x, n-1)
     
-print(power(2,-2))
+print(power(2,6))
